@@ -28,6 +28,7 @@ public class Demo {
         /// 千万别忘记finish 会帮忙关闭流
         excelWriter.finish();
 
+        System.out.println("导出的excel文件地址：" + TestFileUtil.getPath());
     }
 
     private List<DemoData> data() {
