@@ -1,0 +1,17 @@
+
+
+#logging配置方式一，方式二在logback-spring.xml
+logging:
+  pattern:
+#    console: "%d - %msg%n"
+#    console: "%d{yyyy-MM-dd HH:mm:ss,SSS} %5p %c{1}:%L - %m%n"
+    level: debug
+  file:
+    path: D:\develop\springboot\logs\springboot.log
+
+#springsecurity配置
+spring:
+  security:
+    user:
+      name: lmy
+      password: lmy.123
