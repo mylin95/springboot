@@ -1,4 +1,28 @@
 
+#mybatis
+mybatis:
+  mapper-locations: classpath*:/mybatis/**/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+#pagehelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+
+
+spring:
+  #mysql数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springbootdb?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+  #springsecurity配置
+  security:
+    user:
+      name: lmy
+      password: lmy.123
 
 #logging配置方式一，方式二在logback-spring.xml
 logging:
@@ -9,9 +33,4 @@ logging:
   file:
     path: D:\develop\springboot\logs\springboot.log
 
-#springsecurity配置
-spring:
-  security:
-    user:
-      name: lmy
-      password: lmy.123
+
