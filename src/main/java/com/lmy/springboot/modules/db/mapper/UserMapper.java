@@ -2,6 +2,7 @@ package com.lmy.springboot.modules.db.mapper;
 
 import com.lmy.springboot.modules.db.domain.User;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -14,7 +15,8 @@ import java.util.List;
  * @Date: 2020/3/19
  * @Version: 1.0
  */
-@MyBatisRespority
+// @MyBatisRepository
+@Repository
 public interface UserMapper {
 
     User getUserInfoById(@Param("userId") String userId);
