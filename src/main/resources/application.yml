@@ -23,6 +23,28 @@ spring:
     user:
       name: lmy
       password: lmy.123
+  # spring整合redis配置
+  redis:
+    database: 0
+    host: 172.20.10.128
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 3
+#        max-wait: -1
+        min-idle: 0
+#    timeout: 1000
+
+#加密参数
+#秘钥
+aes:
+  sKey: "0CoJUm6Qyw8W8jud"
+  #偏移量(十六位）
+  ivParameter: "0102030405060708"
+  #分隔符
+  sp: "%%%"
 
 #logging配置方式一，方式二在logback-spring.xml
 logging:
@@ -33,4 +55,6 @@ logging:
   file:
     path: D:\develop\springboot\logs\springboot.log
 
-
+# 启动端口
+server:
+  port: 8888

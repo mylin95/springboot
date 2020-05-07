@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmy.springboot.modules.sso.mapper.TbUserMapper">
+    <resultMap id="userInfoMap" type="com.lmy.springboot.modules.sso.domain.TbUser">
+        <result column="uid" property="uid"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="age" property="age"/>
+    </resultMap>
+
+    <select id="getUserInfoById" resultMap="userInfoMap">
+        select uid, username, password, age from tb_user
+        where uid = #{userId}
+    </select>
+
+    <select id="getUserInfoByUsername" resultMap="userInfoMap">
+        select uid, username, password, age from tb_user
+        where username = #{username}
+    </select>
+
+    <select id="getUserInfoByUser" parameterType="com.lmy.springboot.modules.sso.domain.TbUser" resultMap="userInfoMap">
+        select uid, username, password, age from tb_user
+        where username = #{tbUser.username} and password = #{tbUser.password}
+    </select>
+
+    <select id="getUserInfoList" resultMap="userInfoMap">
+        select uid, username, password, age from tb_user
+    </select>
+
+</mapper>
