@@ -15,8 +15,10 @@ public class Student {
 
     private String name ;
     private int age ;
-    private String id ;  // Ñ§ºÅ
+    private String id ;
     private List<String> hobbies ;
+    
+    public Student () {}
 
     public Student(String name, int age) {
         this.name = name;
