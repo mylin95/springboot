@@ -6,6 +6,7 @@ import com.lmy.springboot.modules.jpa.domain.User;
 import com.lmy.springboot.modules.jpa.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,14 +30,14 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping("/{userId}")
+    @GetMapping("/{userId}")
     public Object getUserInfo(@PathVariable(value = "userId", required = false) String userId) {
 
         User user = userService.getUserInfoById(userId);
         return user;
     }
 
-    @RequestMapping("/list")
+    @GetMapping("/list")
     public Object getUserInfoList() {
         Page page = PageHelper.startPage(0, 5);
         List<User> userList = userService.getUserInfoList();

@@ -23,12 +23,12 @@ public class UserEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "user_id")
     @ApiModelProperty("主键")
-    private int userId;
+    private Long userId;
     @ApiModelProperty("用户名")
     private String username;
     @ApiModelProperty("年龄")
     @Column(name = "age")
-    private int userAge;
+    private Integer userAge;
     @ApiModelProperty("密码")
     private String password;
     @Transient

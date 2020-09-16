@@ -18,8 +18,13 @@ public class Student {
 
     private String name ;
     private int age ;
-    private String id ;  // —ß∫≈
+    /**
+     * Â≠¶Âè∑
+     */
+    private String id ;
     private List<String> hobbies ;
+
+    public Student() {}
 
     public Student(String name, int age) {
         this.name = name;

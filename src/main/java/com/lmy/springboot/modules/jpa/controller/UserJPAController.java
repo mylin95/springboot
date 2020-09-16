@@ -4,6 +4,7 @@ import com.lmy.springboot.modules.jpa.domain.UserEntity;
 import com.lmy.springboot.modules.jpa.repository.UserEntityRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,7 +28,7 @@ public class UserJPAController {
     @Autowired
     UserEntityRepo userEntityRepo;
 
-    @RequestMapping("/{userId}")
+    @GetMapping("/{userId}")
     public Object getUserInfo(@PathVariable(value = "userId", required = false) Long userId) {
 
         UserEntity user = userEntityRepo.findById(userId).get();
@@ -43,7 +44,7 @@ public class UserJPAController {
     //     return userList;
     // }
 
-    @RequestMapping("/list")
+    @GetMapping("/list")
     public Object getUserInfoList() {
         List<UserEntity> all = userEntityRepo.findAll();
         return all;
