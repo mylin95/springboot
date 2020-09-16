@@ -60,6 +60,11 @@
             <artifactId>dozer-core</artifactId>
             <version>6.4.0</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cn.chenzw.excel</groupId>-->
+<!--            <artifactId>magical-excel</artifactId>-->
+<!--            <version>1.0.5-a</version>-->
+<!--        </dependency>-->
 
         <!--<dependency>-->
             <!--<groupId>com.github.dozermapper</groupId>-->

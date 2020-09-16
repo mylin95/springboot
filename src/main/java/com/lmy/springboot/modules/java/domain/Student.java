@@ -1,5 +1,7 @@
 package com.lmy.springboot.modules.java.domain;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -11,6 +13,7 @@ import java.util.List;
  * @Date: 2020/3/9
  * @Version: 1.0
  */
+@Data
 public class Student {
 
     private String name ;
@@ -29,37 +32,4 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public List<String> getHobbies() {
-        return hobbies;
-    }
-
-    public void setHobbies(List<String> hobbies) {
-        this.hobbies = hobbies;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", id='" + id + '\'' +
-                ", hobbies=" + hobbies +
-                '}';
-    }
 }

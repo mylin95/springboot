@@ -1,5 +1,11 @@
 package com.lmy.springboot.modules.java;
 
+import com.alibaba.fastjson.JSONObject;
+import com.lmy.springboot.modules.java.domain.Student;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.junit.Test;
+
+import java.math.BigDecimal;
 import java.util.*;
 
 public class Demo {
@@ -9,7 +15,7 @@ public class Demo {
         str.replaceAll("\\\\", "-");
         System.out.println(str);
 
-        // ·Ç¿Õ
+        // ï¿½Ç¿ï¿½
         Map a = new HashMap();
         if(a == null) {
             System.out.println("aaa"+a.isEmpty());
@@ -111,6 +117,33 @@ public class Demo {
     }
 
 
+    @Test
+    public void testFn12() {
+        Student u = new Student();
+        u.setName(null);
+        u.setId(null);
+        u.setHobbies(null);
+        String str = JSONObject.toJSONString(u);
+        JSONObject json = JSONObject.parseObject(str);
+        System.out.println(json);
+        Map<String, Student> map = new HashMap<>();
+        map.put("1", u);
+        u.setName("tom");
+        System.out.println(map.toString());
+    }
 
+    @Test
+    public void testFn13() throws InterruptedException {
+        String param = null;
+        System.out.println("null".hashCode());
+        // switch (param) {
+        //     case "null":
+        //         System.out.println("null");
+        //         break;
+        //     default:
+        //         System.out.println("default");
+        // }
+
+    }
 
 }
