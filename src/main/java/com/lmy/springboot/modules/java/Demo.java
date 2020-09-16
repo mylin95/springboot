@@ -1,5 +1,6 @@
 package com.lmy.springboot.modules.java;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lmy.springboot.modules.java.domain.Student;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.junit.Test;
@@ -114,7 +115,7 @@ public class Demo {
         }
         return isWeekend;
     }
-    
+
     @Test
     public void test() {
         Map<String, Object> map = new HashMap<>();
@@ -128,9 +129,38 @@ public class Demo {
             String instName = list.get(0).get("instName");
             System.out.println(instName);
         }
-        
+
     }
 
+
+    @Test
+    public void testFn12() {
+        Student u = new Student();
+        u.setName(null);
+        u.setId(null);
+        u.setHobbies(null);
+        String str = JSONObject.toJSONString(u);
+        JSONObject json = JSONObject.parseObject(str);
+        System.out.println(json);
+        Map<String, Student> map = new HashMap<>();
+        map.put("1", u);
+        u.setName("tom");
+        System.out.println(map.toString());
+    }
+
+    @Test
+    public void testFn13() throws InterruptedException {
+        String param = null;
+        System.out.println("null".hashCode());
+        // switch (param) {
+        //     case "null":
+        //         System.out.println("null");
+        //         break;
+        //     default:
+        //         System.out.println("default");
+        // }
+
+    }
     /**
      * 包装类比较相等
      */
@@ -144,7 +174,7 @@ public class Demo {
     }
 
     /**
-     * (1)指定一个误差范围，两个浮点数的差值在此范围之内，则认为是相等的。 
+     * (1)指定一个误差范围，两个浮点数的差值在此范围之内，则认为是相等的。
      */
     @Test
     public void testFun2() {
@@ -184,20 +214,20 @@ public class Demo {
             System.out.println("recommend1 = recommend2");
         }
     }
-    
+
     @Test
     public void testFun5() {
         // String str = null;
         String str = (String) null;
         System.out.println(str instanceof String);
-        
+
         Long num1 = 0L;
         long num2 = 1L;
         num1 = num2;
         System.out.println(num1 instanceof Long);
     }
-    
-    
+
+
     @Test
     public void testFun6() {
         String str = "a,b,c,,";
@@ -205,7 +235,7 @@ public class Demo {
         // ary = {"a", "b", "c"} 预期大于3，结果是3
         System.out.println(ary.length);
     }
-    
+
     @Test
     public void testFun7() {
         String str = "start";
@@ -222,8 +252,8 @@ public class Demo {
         String s = str2.toString();
         System.out.println(s);
     }
-    
-    
+
+
     @Test
     public void testFun8() {
         Map<String, String> map = new HashMap<>();
@@ -242,23 +272,23 @@ public class Demo {
         Optional<Student> stu = Optional.empty();
         System.out.println(stu);
     }
-    
+
     @Test
     public void testFun10() {
         Integer num = null;
         boolean isFlagsNull = num == null;
         long flags = isFlagsNull ? 0L : Long.parseLong(String.valueOf(num));
         System.out.println(flags);
-        
-        
+
+
     }
-    
+
     @Test
     public void testFun11() {
         System.out.println(StringEscapeUtils.escapeXml10("<script>&alert('111')</script>"));
     }
 
-    
+
 
 
 }

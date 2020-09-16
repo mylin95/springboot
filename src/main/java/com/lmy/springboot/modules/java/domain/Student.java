@@ -16,8 +16,11 @@ public class Student {
     private String name ;
     private int age ;
     private String id ;
+    /**
+     * 学号
+     */
     private List<String> hobbies ;
-    
+
     public Student () {}
 
     public Student(String name, int age) {
@@ -45,6 +48,14 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public List<String> getHobbies() {

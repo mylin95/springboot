@@ -14,10 +14,11 @@ class SpringBootApplicationTests {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    
+
     @Test
     void contextLoads() {
         log.info("hello java ");
+        log.info("你好 java ");
         // testFn1();
     }
 
@@ -28,6 +29,15 @@ class SpringBootApplicationTests {
     void testFn1() {
 
         ResponseEntity<JSONObject> forEntity = restTemplate.getForEntity("/test/user/1",
+                JSONObject.class);
+        log.info(forEntity.toString());
+        log.info(forEntity.getBody().toString());
+    }
+
+    @Test
+    void testFn2() {
+
+        ResponseEntity<JSONObject> forEntity = restTemplate.getForEntity("/test/user/list",
                 JSONObject.class);
         log.info(forEntity.toString());
         log.info(forEntity.getBody().toString());

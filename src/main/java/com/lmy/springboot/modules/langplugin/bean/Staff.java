@@ -20,7 +20,7 @@ public class Staff {
     // option：是否可选，默认必填，一般改成true可选，否则映射map时不匹配会报错
     @Mapping(value = "name", optional = true)
     private String name2 ;
-    private Integer age ;
+    private String age ;
     
     @Mapping(value = "birthday", optional = true)
     private Date staffBirthday ;

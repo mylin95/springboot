@@ -1,6 +1,6 @@
-package com.lmy.springboot.modules.db.mapper;
+package com.lmy.springboot.modules.jpa.mapper;
 
-import com.lmy.springboot.modules.db.domain.User;
+import com.lmy.springboot.modules.jpa.domain.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -21,4 +21,5 @@ public interface UserMapper {
     User getUserInfoById(@Param("userId") String userId);
 
     List<User> getUserInfoList();
+
 }
