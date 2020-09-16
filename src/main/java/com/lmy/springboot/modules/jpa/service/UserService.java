@@ -1,7 +1,7 @@
-package com.lmy.springboot.modules.db.service;
+package com.lmy.springboot.modules.jpa.service;
 
-import com.lmy.springboot.modules.db.domain.User;
-import com.lmy.springboot.modules.db.mapper.UserMapper;
+import com.lmy.springboot.modules.jpa.domain.User;
+import com.lmy.springboot.modules.jpa.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

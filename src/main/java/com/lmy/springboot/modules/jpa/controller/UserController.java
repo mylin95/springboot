@@ -1,9 +1,9 @@
-package com.lmy.springboot.modules.db.controller;
+package com.lmy.springboot.modules.jpa.controller;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.lmy.springboot.modules.db.domain.User;
-import com.lmy.springboot.modules.db.service.UserService;
+import com.lmy.springboot.modules.jpa.domain.User;
+import com.lmy.springboot.modules.jpa.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

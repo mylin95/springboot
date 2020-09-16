@@ -1,4 +1,4 @@
-package com.lmy.springboot.modules.db.domain;
+package com.lmy.springboot.modules.jpa.domain;
 
 import lombok.Data;
 
