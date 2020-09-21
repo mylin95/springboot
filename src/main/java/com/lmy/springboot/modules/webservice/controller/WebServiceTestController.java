@@ -73,7 +73,7 @@ public class WebServiceTestController {
         sb.append("        </Head>\n");
         sb.append("        <Body>\n");
         sb.append("            <ResultCode>0</ResultCode>\n");
-        sb.append("            <ErrMsg>aaaa</ErrMsg>\n");
+        sb.append("            <ErrMsg>唉呀妈呀</ErrMsg>\n");
         sb.append("            <WrapperException>bbbb</WrapperException>\n");
         sb.append("        </Body>\n");
         sb.append("    </Info>\n");
