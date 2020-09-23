@@ -23,7 +23,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/jpa/user")
-public class UserJPAController {
+public class UserJpaController {
 
     @Autowired
     UserEntityRepo userEntityRepo;

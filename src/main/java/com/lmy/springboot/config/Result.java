@@ -9,24 +9,6 @@ import lombok.Data;
 @Data
 public class Result<T> {
 
-    public Result(boolean success, int code) {
-        this.setSuccess(success);
-        this.setCode(code);
-    }
-
-    public Result(boolean success, int code, T data) {
-        this.setSuccess(success);
-        this.setCode(code);
-        this.setData(data);
-    }
-
-    public Result(boolean success, int code, String msg) {
-        this.setSuccess(success);
-        this.setCode(code);
-        this.setMsg(msg);
-    }
-
-
     /**
      * 请求是否成功
      * true:成功
@@ -53,6 +35,22 @@ public class Result<T> {
      */
     private T data;
 
+    public Result(boolean success, int code) {
+        this.setSuccess(success);
+        this.setCode(code);
+    }
+
+    public Result(boolean success, int code, T data) {
+        this.setSuccess(success);
+        this.setCode(code);
+        this.setData(data);
+    }
+
+    public Result(boolean success, int code, String msg) {
+        this.setSuccess(success);
+        this.setCode(code);
+        this.setMsg(msg);
+    }
 
     public static <T> Result<T> success() {
         return new Result<T>(true, 200);

@@ -9,7 +9,7 @@ import java.net.URL;
  * @ProjectName: java
  * @Package: PACKAGE_NAME
  * @ClassName: UrlGetData
- * @Description: Ä£Äâ±¾ÏµÍ³Í¨¹ýUrl·½Ê½·¢ËÍ±¨ÎÄµ½Ä¿±ê·þÎñÆ÷£¬²¢»ñÈ¡·µ»ØÊý¾Ý£º£¨ÊµÏÖÀà£©
+ * @Description: Ä£ï¿½â±¾ÏµÍ³Í¨ï¿½ï¿½Urlï¿½ï¿½Ê½ï¿½ï¿½ï¿½Í±ï¿½ï¿½Äµï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½à£©
  * @Author: linmy
  * @Date: 2020/3/5
  * @Version: 1.0
@@ -19,7 +19,7 @@ public class UrlGetData2 {
 
     /**
 
-     * ¸ù¾Ýurl»ñÈ¡jsonÊý¾Ý
+     * ï¿½ï¿½ï¿½ï¿½urlï¿½ï¿½È¡jsonï¿½ï¿½ï¿½ï¿½
      *?
      * @param url
      * @return
@@ -50,7 +50,7 @@ public class UrlGetData2 {
 
     /**
 
-     * ¸ù¾Ýurl»ñÈ¡jsonÊý¾Ý
+     * ï¿½ï¿½ï¿½ï¿½urlï¿½ï¿½È¡jsonï¿½ï¿½ï¿½ï¿½
      *?
      * @param url
      * @return
@@ -63,16 +63,16 @@ public class UrlGetData2 {
                     .openConnection();
             uc.setDoOutput(true);
 
-            //»ñÈ¡Êä³öÁ÷¶ÔÏó
+            //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             OutputStream raw = uc.getOutputStream();
             OutputStream buffered = new BufferedOutputStream(raw);
             OutputStreamWriter out = new OutputStreamWriter(buffered, "UTF-8");
 
-            System.out.println("·¢ËÍ±¨ÎÄ:"+data);
+            System.out.println("ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½:"+data);
             out.write(data);
 
             out.flush();
-            System.out.println("¹Ø±ÕÁ¬½Ó");
+            System.out.println("ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½");
             out.close();
 
             int contentLength = uc.getContentLength();
@@ -94,12 +94,12 @@ public class UrlGetData2 {
         return json.toString();
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
 
-        //Ä¿±ê·þÎñÆ÷µØÖ·
+        //Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
         // String url1 = "http://10.14.30.242:9080/RES/Rule";
         String url = "http://47.100.108.80:9200";
-        //·¢ËÍµÄ±¨ÎÄ
+        //ï¿½ï¿½ï¿½ÍµÄ±ï¿½ï¿½ï¿½
         String data = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><CardRequest><SEQ_TIME_STAMP>2014325170152799504</SEQ_TIME_STAMP><TYPE>1</TYPE><v_101>-999998</v_101><v_102>0.002740</v_102><v_109>111.11</v_109></CardRequest>";
         try {
             String jsonString2 = UrlGetData2.loadJson2(url, data);
