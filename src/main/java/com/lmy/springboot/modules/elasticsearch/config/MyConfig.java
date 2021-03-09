@@ -22,11 +22,14 @@ public class MyConfig {
         );
 
         Settings settings = Settings.builder()
+                // .put("xpack.security.user", "elastic:lmy.123")
                 .put("cluster.name", "es-cluster")
+                .put("node.name", "main")
                 .build();
 
         TransportClient client = new PreBuiltTransportClient(settings);
-        client.addTransportAddress(node);   // 可添加多个节点node
+        // 可添加多个节点node
+        client.addTransportAddress(node);
         return client;
     }
 }
